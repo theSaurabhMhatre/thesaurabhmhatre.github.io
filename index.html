@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Saurabh Mhatre</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/portfolio-light.css">
+    <link rel="stylesheet" href="css/portfolio-dark.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/portfolio.js"></script>
+</head>
+
+<body ng-class="{true: 'height-main-light', false: 'height-main-dark'}[theme]"
+      ng-app="portfolioApp"
+      ng-controller="portfolioController"
+      ng-cloak>
+
+<div ng-class="{true: 'intro-container-light', false: 'intro-container-dark'}[theme]">
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="switch" ng-model="theme">
+        <label class="custom-control-label" for="switch" style="color: white;"></label>
+    </div>
+    <small ng-class="{true: 'font-light', false: 'font-dark'}[theme]">Switch Theme</small>
+    <br><br>
+    <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">Hello, I am</h6>
+    <h2 ng-class="{true: 'font-light', false: 'font-dark'}[theme]"><strong>SAURABH MHATRE</strong></h2>
+    <div ng-class="{true: 'image-wrapper-light', false: 'image-wrapper-dark'}[theme]">
+        <img src="assets/portfolio-page-image.jpg" class="image-style" alt="Saurabh Mhatre">
+    </div>
+    <br>
+    <div class="intro-wrapper">
+        <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+            I am a graduate student at North Carolina State University studying Computer Science. Prior to this,
+            I've worked as a Java Developer at Tata Consultancy Services where I learned to code in a professional
+            environment.
+        </h6>
+        <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+            I enjoy developing full stack applications and learning new languages and frameworks in the process. I am
+            currently looking for internship opportunities for Summer 2020 where I aspire to grow as a full stack
+            developer and contribute to interesting projects which impact large number of users.
+        </h6>
+    </div>
+</div>
+
+<nav ng-class="{true: 'navbar navbar-expand navbar-dark sticky-top justify-content-center navbar-color-light',
+                false: 'navbar navbar-expand navbar-dark sticky-top justify-content-center navbar-color-dark'}[theme]">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" ng-style="color" href="#projects-container"><h6>Projects</h6></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" ng-style="color" href="#education-container"><h6>Education</h6></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" ng-style="color" href="#experience-container"><h6>Experience</h6></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" ng-style="color" href="#contact-container"><h6>Contact</h6></a>
+        </li>
+    </ul>
+</nav>
+
+<div ng-class="{true: 'wrapper-light', false: 'wrapper-dark'}[theme]">
+    <div class="main-container" id="projects-container">
+        <br>
+        <h3 align="center"
+            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+            PROJECTS
+        </h3>
+        <div class="height-custom"></div>
+        <div class="row">
+            <div class="col-sm-12 mt-4">
+                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <strong>ASK ME ANYTHING</strong>
+                </h5>
+                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                    <p>
+                        A discussion forum that started as a hobby project and is inspired by the likes of
+                        Quora and StackOverflow.
+                    </p>
+                    <p>
+                    <p>
+                        I started working on this project when I was learning Dropwizard. After working on the REST APIs
+                        for some time, I decided to make a front end as well, getting my hands dirty with Bootstrap and
+                        AngularJS in the process. The result was immensely satisfying, and I ended up investing more
+                        time as well as adding more features than I had initially planned. A highlight of this application
+                        is that it allows users to like questions and/or answers which are always ranked based on the
+                        number of likes.
+                    </p>
+                    <div class="btn-group btn-group-md">
+                        <a class="btn btn-primary"
+                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                           href="https://github.com/theSaurabhMhatre/forum-solution">
+                            GitHub Repository
+                        </a>
+                        <a class="btn btn-primary"
+                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                           href="https://ask-me-any-thing.herokuapp.com/forum#!/home/all">
+                            Check it in action
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 mt-4">
+                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <strong>SIMPLE LIBRARY</strong>
+                </h5>
+                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                    <p>
+                        A simple library management system which includes almost all the features required to manage
+                        a library.
+                    </p>
+                    <p>
+                    <p>
+                        I worked alongside two team members to create this web application as a part of my coursework
+                        during Masters. It has been developed using Ruby on Rails and we've leveraged various libraries
+                        to implement a plethora of features. The user base consists of three types of users, all with
+                        role based privileges. Users are also notified of various requests via emails. It also supports
+                        social login through Google accounts. Additionally, the application is completely responsive for
+                        mobile use.
+                    </p>
+                    <div class="btn-group btn-group-md">
+                        <a class="btn btn-primary"
+                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                           href="https://github.com/theSaurabhMhatre/oodd-517-library-management-system">
+                            GitHub Repository
+                        </a>
+                        <a class="btn btn-primary"
+                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                           href="https://simple-library-system.herokuapp.com/login">
+                            Check it in action
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider div-transparent"></div>
+
+    <div class="main-container" id="education-container">
+        <br>
+        <h3 align="center"
+            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+            EDUCATION
+        </h3>
+        <div class="height-custom"></div>
+        <div class="row">
+            <div class="col-sm-12 mt-4">
+                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <strong>BACHELORS DEGREE</strong>
+                </h5>
+                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                    <p>A simple question-answer website that started as a hobby project and is inspired by the likes of
+                        Quora and StackOverflow.</p>
+                    <p>
+                    <p>
+                        I started working on this project when I was learning Dropwizard. After working on the REST APIs
+                        for some time, I decided to make a front end as well, getting my hands dirty with Bootstrap and
+                        AngularJS in the process. The result was immensely satisfying, and I ended up investing more
+                        time as well as adding more features than I had initially planned.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-12 mt-4">
+                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <strong>MASTERS DEGREE</strong>
+                </h5>
+                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                    <p>A simple question-answer website that started as a hobby project and is inspired by the likes of
+                        Quora and StackOverflow.</p>
+                    <p>
+                    <p>
+                        I started working on this project when I was learning Dropwizard. After working on the REST APIs
+                        for some time, I decided to make a front end as well, getting my hands dirty with Bootstrap and
+                        AngularJS in the process. The result was immensely satisfying, and I ended up investing more
+                        time as well as adding more features than I had initially planned.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider div-transparent"></div>
+
+    <div class="main-container" id="experience-container">
+        <br>
+        <h3 align="center"
+            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+            WORK EXPERIENCE
+        </h3>
+        <div class="height-custom"></div>
+        <div class="row">
+            <div class="col-sm-12 mt-4">
+                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <strong>TATA CONSULTANCY SERVICES</strong>
+                </h5>
+                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                    <p>A simple question-answer website that started as a hobby project and is inspired by the likes of
+                        Quora and StackOverflow.</p>
+                    <p>
+                    <p>
+                        I started working on this project when I was learning Dropwizard. After working on the REST APIs
+                        for some time, I decided to make a front end as well, getting my hands dirty with Bootstrap and
+                        AngularJS in the process. The result was immensely satisfying, and I ended up investing more
+                        time as well as adding more features than I had initially planned.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider div-transparent"></div>
+
+    <div class="main-container" id="contact-container">
+        <br>
+        <h3 align="center"
+            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+            CONTACT
+        </h3>
+        <div class="height-custom"></div>
+        <div class="row">
+            <div class="col-sm-12 mt-4">
+                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <strong>Raleigh, North Carolina</strong>
+                </h5>
+                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                    <p>
+                        smhatre [at] ncsu [dot] edu
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="btn btn-primary btn-sm"
+               href="https://github.com/theSaurabhMhatre"
+               ng-style="social">
+                <span class="fa fa-github-alt"></span>
+                <strong> GitHub</strong>
+            </a>
+            <a class="btn btn-primary btn-sm"
+               href="https://www.linkedin.com/in/saurabh-mhatre-2a7949104/"
+               ng-style="social">
+                <span class="fa fa-linkedin"></span>
+                <strong> LinkedIn</strong>
+            </a>
+            <a class="btn btn-primary btn-sm"
+               href="mailto:smhatre@ncsu.edu"
+               ng-style="social">
+                <span class="fa fa-envelope"></span>
+                <strong> Mail</strong>
+            </a>
+        </div>
+        <br>
+        <h6>
+            <i ng-class="{true: 'fa fa-copyright font-light', false: 'fa fa-copyright font-dark'}[theme]">
+                <strong class="font-custom"">
+                SAURABH MHATRE 2020
+                </strong>
+            </i>
+        </h6>
+    </div>
+    <br>
+</div>
+
+</body>
+
+<script>
+    let anchorLinks = document.querySelectorAll('a[href^="#"]');
+    for (let item of anchorLinks) {
+        item.addEventListener('click', (e) => {
+            let hashVal = item.getAttribute('href');
+            let target = document.querySelector(hashVal);
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            history.pushState(null, null, hashVal);
+            e.preventDefault();
+        })
+    }
+</script>
+
+</html>

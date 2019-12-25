@@ -1,0 +1,134 @@
+.intro-container-light {
+    background: #FFFFFF;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    /*background-image: linear-gradient(to bottom, #686868, #FFFFFF);*/
+}
+
+.wrapper-light {
+    color: white;
+    min-height: 1000px;
+    background: #FFFFFF;
+    margin: 5em 5em 5em 5em;
+    border-radius: 0.6em;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper-light {
+        color: white;
+        min-height: 1000px;
+        background: #FFFFFF;
+        margin: 5em 5em 5em 5em;
+        border-radius: 0.6em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper-light {
+        color: white;
+        min-height: 1000px;
+        background: #FFFFFF;
+        margin: 4em 4em 4em 4em;
+        border-radius: 0.6em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .wrapper-light {
+        color: white;
+        min-height: 1000px;
+        background: #FFFFFF;
+        margin: 3em 3em 3em 3em;
+        border-radius: 0.6em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper-light {
+        color: white;
+        min-height: 1500px;
+        background: #FFFFFF;
+        margin: 2em 2em 2em 2em;
+        border-radius: 0.6em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper-light {
+        color: white;
+        min-height: 1500px;
+        background: #FFFFFF;
+        margin: 1em 1em 1.5em 1em;
+        border-radius: 0.6em;
+    }
+}
+
+.card-light {
+    border: #343A40 0.2rem solid;
+    border-radius: 0;
+    margin-top: 0.5rem;
+}
+
+.image-wrapper-light {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background: #1D1E22;
+    /*background-image: linear-gradient(to bottom, #343A40, whitesmoke);*/
+}
+
+@media screen and (max-width: 600px) {
+    .image-wrapper-light {
+        width: 300px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        background: #1D1E22;
+        /*background-image: linear-gradient(to bottom, #343A40, whitesmoke);*/
+    }
+}
+
+.li-btn {
+    border-radius: 0.4rem;
+    background: #121212;
+    margin: 0rem 0.2rem 0rem 0.2rem;
+}
+
+.font-light {
+    color: black;
+}
+
+.navbar-color-light {
+    padding: 0.4rem 0rem 0.4rem 0rem;
+    background: #FFFFFF;
+}
+
+.height-main-light {
+    background: #1D1E22;
+    height: 2500px;
+}
+
+@media screen and (max-width: 1100px) {
+    .height-main-light {
+        background: #1D1E22;
+        height: 2750px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .height-main-light {
+        background: #1D1E22;
+        height: 3000px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .height-main-light {
+        background: #1D1E22;
+        height: 3000px;
+    }
+}

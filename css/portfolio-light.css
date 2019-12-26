@@ -109,26 +109,33 @@
 
 .height-main-light {
     background: #1D1E22;
-    height: 2500px;
+    height: 2750px;
+}
+
+@media screen and (max-width: 1300px) {
+    .height-main-light {
+        background: #1D1E22;
+        height: 3000px;
+    }
 }
 
 @media screen and (max-width: 1100px) {
     .height-main-light {
         background: #1D1E22;
-        height: 2750px;
+        height: 3250px;
     }
 }
 
 @media screen and (max-width: 900px) {
     .height-main-light {
         background: #1D1E22;
-        height: 3000px;
+        height: 3250px;
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .height-main-light {
         background: #1D1E22;
-        height: 3000px;
+        height: 3500px;
     }
 }

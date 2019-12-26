@@ -5,6 +5,7 @@
     <title>Saurabh Mhatre</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/portfolio-light.css">
@@ -57,10 +58,10 @@
             <a class="nav-link" ng-style="color" href="#projects-container"><h6>Projects</h6></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" ng-style="color" href="#education-container"><h6>Education</h6></a>
+            <a class="nav-link" ng-style="color" href="#experience-container"><h6>Experience</h6></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" ng-style="color" href="#experience-container"><h6>Experience</h6></a>
+            <a class="nav-link" ng-style="color" href="#education-container"><h6>Education</h6></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" ng-style="color" href="#contact-container"><h6>Contact</h6></a>
@@ -81,6 +82,9 @@
                 <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
                     <strong>ASK ME ANYTHING</strong>
                 </h5>
+                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <small>Java | Dropwizard | Hibernate | AngularJS | Bootstrap</small>
+                </h6>
                 <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
                     <p>
                         A discussion forum that started as a hobby project and is inspired by the likes of
@@ -113,6 +117,9 @@
                 <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
                     <strong>SIMPLE LIBRARY</strong>
                 </h5>
+                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <small>Ruby on Rails | OAuth 2.0 | Bootstrap</small>
+                </h6>
                 <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
                     <p>
                         A simple library management system which includes almost all the features required to manage
@@ -141,49 +148,39 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="divider div-transparent"></div>
-
-    <div class="main-container" id="education-container">
-        <br>
-        <h3 align="center"
-            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-            EDUCATION
-        </h3>
-        <div class="height-custom"></div>
-        <div class="row">
             <div class="col-sm-12 mt-4">
                 <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <strong>BACHELORS DEGREE</strong>
+                    <strong>EXPERTIZA</strong>
                 </h5>
+                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <small>Open Source | Ruby on Rails | SideKiq</small>
+                </h6>
                 <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <p>A simple question-answer website that started as a hobby project and is inspired by the likes of
-                        Quora and StackOverflow.</p>
                     <p>
-                    <p>
-                        I started working on this project when I was learning Dropwizard. After working on the REST APIs
-                        for some time, I decided to make a front end as well, getting my hands dirty with Bootstrap and
-                        AngularJS in the process. The result was immensely satisfying, and I ended up investing more
-                        time as well as adding more features than I had initially planned.
+                        Made Open Source Contribution to Expertiza, a course management and peer review system used by
+                        instructors at North Carolina State University.
                     </p>
-                </div>
-            </div>
-            <div class="col-sm-12 mt-4">
-                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <strong>MASTERS DEGREE</strong>
-                </h5>
-                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <p>A simple question-answer website that started as a hobby project and is inspired by the likes of
-                        Quora and StackOverflow.</p>
                     <p>
                     <p>
-                        I started working on this project when I was learning Dropwizard. After working on the REST APIs
-                        for some time, I decided to make a front end as well, getting my hands dirty with Bootstrap and
-                        AngularJS in the process. The result was immensely satisfying, and I ended up investing more
-                        time as well as adding more features than I had initially planned.
+                        Expertiza is a course management system in use at North Carolina State University. It has been
+                        built using Ruby on Rails. As a part of coursework, we had to enhance the functionality of the
+                        system. My team was tasked with augmenting the grade calculation of quizzes, a module which
+                        allowed quizzes to be created. We introduced the ability to associate weights with questions in
+                        a quiz, and ensured that those weights are considered when grading those quizzes. Also, we worked
+                        on the assignment module, and improved the way topic deadlines are handled.
                     </p>
+                    <div class="btn-group btn-group-md">
+                        <a class="btn btn-primary"
+                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                           href="https://github.com/theSaurabhMhatre/expertiza/tree/grade-calc">
+                            GitHub Repository
+                        </a>
+                        <a class="btn btn-primary"
+                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                           href="https://expertiza.ncsu.edu">
+                            Visit Expertiza
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,16 +200,65 @@
                 <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
                     <strong>TATA CONSULTANCY SERVICES</strong>
                 </h5>
+                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <small>Java Developer | September 2017 - June 2019</small>
+                </h6>
                 <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <p>A simple question-answer website that started as a hobby project and is inspired by the likes of
-                        Quora and StackOverflow.</p>
                     <p>
-                    <p>
-                        I started working on this project when I was learning Dropwizard. After working on the REST APIs
-                        for some time, I decided to make a front end as well, getting my hands dirty with Bootstrap and
-                        AngularJS in the process. The result was immensely satisfying, and I ended up investing more
-                        time as well as adding more features than I had initially planned.
+                        Post Bachelor’s, a job at TCS provided me with ample opportunities to apply my learning to
+                        existing software systems which helped me understand the usage of technologies from an industry
+                        standpoint. At TCS, I was able to enhance my understanding of software systems and was
+                        introduced to various tools and methodologies available to help streamline development
+                        processes. During my tenure at TCS, I worked in a small team as a Java developer to enhance a
+                        legacy content management system developed using Struts, a Java framework. I was also tasked
+                        with the maintenance of a multitude of Java services which communicated with API endpoints
+                        using the SDK provided by Box Inc, a cloud content management service. Additionally, I also had
+                        various opportunities to collaborate with the DevOps team to build CI/CD pipelines thereby
+                        augment my understanding of the deployment process.
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider div-transparent"></div>
+
+    <div class="main-container" id="education-container">
+        <br>
+        <h3 align="center"
+            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+            EDUCATION
+        </h3>
+        <div class="height-custom"></div>
+        <div class="row">
+            <div class="col-sm-12 mt-4">
+                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <strong>MASTERS DEGREE</strong>
+                </h5>
+                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    Master of Computer Science
+                </h6>
+                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                    <span>North Carolina State University, Raleigh</span>
+                    <br>
+                    <span>August 2019 - May 2021 (Expected)</span>
+                    <br>
+                    <span>Semester 1 GPA: 4.0</span>
+                </div>
+            </div>
+            <div class="col-sm-12 mt-4">
+                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    <strong>BACHELORS DEGREE</strong>
+                </h5>
+                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                    Bachelor of Computer Engineering
+                </h6>
+                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                    <span>Vidyalankar Institute of Technology, Mumbai</span>
+                    <br>
+                    <span>August 2013 - May 2017</span>
+                    <br>
+                    <span>Cumulative GPA: 8.8 / 10</span>
                 </div>
             </div>
         </div>
@@ -227,6 +273,14 @@
             CONTACT
         </h3>
         <div class="height-custom"></div>
+        <a class="btn btn-primary btn-sm"
+           href="assets/saurabh-mhatre-resume.pdf"
+           ng-style="social"
+           download>
+            <strong>
+                View Resume
+            </strong>
+        </a>
         <div class="row">
             <div class="col-sm-12 mt-4">
                 <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
@@ -262,7 +316,7 @@
         <br>
         <h6>
             <i ng-class="{true: 'fa fa-copyright font-light', false: 'fa fa-copyright font-dark'}[theme]">
-                <strong class="font-custom"">
+                <strong class="font-custom">
                 SAURABH MHATRE 2020
                 </strong>
             </i>

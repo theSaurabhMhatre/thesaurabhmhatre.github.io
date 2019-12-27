@@ -95,9 +95,9 @@
                         I started working on this project when I was learning Dropwizard. After working on the REST APIs
                         for some time, I decided to make a front end as well, getting my hands dirty with Bootstrap and
                         AngularJS in the process. The result was immensely satisfying, and I ended up investing more
-                        time as well as adding more features than I had initially planned. A highlight of this application
-                        is that it allows users to like questions and/or answers which are always ranked based on the
-                        number of likes.
+                        time as well as adding more features than I had initially planned. A highlight of this
+                        application is that it allows users to like questions and/or answers which are always ranked
+                        based on the number of likes.
                     </p>
                     <div class="btn-group btn-group-md">
                         <a class="btn btn-primary"
@@ -166,8 +166,8 @@
                         built using Ruby on Rails. As a part of coursework, we had to enhance the functionality of the
                         system. My team was tasked with augmenting the grade calculation of quizzes, a module which
                         allowed quizzes to be created. We introduced the ability to associate weights with questions in
-                        a quiz, and ensured that those weights are considered when grading those quizzes. Also, we worked
-                        on the assignment module, and improved the way topic deadlines are handled.
+                        a quiz, and ensured that those weights are considered when grading those quizzes. Also, we
+                        worked on the assignment module, and improved the way topic deadlines are handled.
                     </p>
                     <div class="btn-group btn-group-md">
                         <a class="btn btn-primary"
@@ -315,6 +315,53 @@
                 <span class="fa fa-envelope"></span>
                 <strong> Mail</strong>
             </a>
+        </div>
+        <br>
+        <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+            Send me a message and I'll revert as soon as I can!
+        </h6>
+        <div class="form-margins">
+            <form action="https://formspree.io/smhatre@ncsu.edu"
+                  method="POST">
+                <div class="row">
+                    <div class="col-sm-6" style="padding-left: 4px; padding-right: 4px">
+                        <div class="form-group" align="left">
+                            <!--<small><label>Name</label></small>-->
+                            <input type="text"
+                                   name="name"
+                                   placeholder="Name"
+                                   class="form-control form-control-sm"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="padding-left: 4px; padding-right: 4px">
+                        <div class="form-group" align="left">
+                            <!--<small><label>Email</label></small>-->
+                            <input type="email"
+                                   name="_replyto"
+                                   placeholder="Email"
+                                   class="form-control form-control-sm"
+                                   requied>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" style="padding-left: 4px; padding-right: 4px">
+                        <div class="form-group" align="left">
+                            <!--<small><label>Message</label></small>-->
+                            <textarea name="message"
+                                      rows="5"
+                                      placeholder="Message"
+                                      class="form-control form-control-sm"
+                                      required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit"
+                       value="Send message"
+                       class="btn btn-primary btn-sm pull-right"
+                       style="margin-right: -10px;">
+            </form>
         </div>
         <br>
         <!--

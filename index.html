@@ -6,8 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/portfolio-light.css">
     <link rel="stylesheet" href="css/portfolio-dark.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -19,390 +18,477 @@
     <script src="js/portfolio.js"></script>
 </head>
 
-<body ng-class="{true: 'height-main-light', false: 'height-main-dark'}[theme]"
-      ng-app="portfolioApp"
-      ng-controller="portfolioController"
-      ng-cloak>
+<body ng-class="{true: 'height-main-light', false: 'height-main-dark'}[theme]" ng-app="portfolioApp"
+    ng-controller="portfolioController" ng-cloak>
 
-<div ng-class="{true: 'intro-container-light', false: 'intro-container-dark'}[theme]">
-    <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="switch" ng-model="theme">
-        <label class="custom-control-label" for="switch" style="color: white;"></label>
+    <div ng-class="{true: 'intro-container-light', false: 'intro-container-dark'}[theme]" id="intro-container">
+        <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="switch" ng-model="theme">
+            <label class="custom-control-label" for="switch" style="color: white;"></label>
+        </div>
+        <small ng-class="{true: 'font-light', false: 'font-dark'}[theme]">Switch Theme</small>
+        <br><br>
+        <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">Hello, I am</h6>
+        <h2 ng-class="{true: 'font-light', false: 'font-dark'}[theme]"><strong>SAURABH MHATRE</strong></h2>
+        <div ng-class="{true: 'image-wrapper-light', false: 'image-wrapper-dark'}[theme]">
+            <img src="assets/portfolio-page-image.jpg" class="image-style" alt="Saurabh Mhatre">
+        </div>
+        <br>
+        <div class="intro-wrapper">
+            <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                I am a graduate student at North Carolina State University studying Computer Science. Prior to this,
+                I've worked as a Java Developer at Tata Consultancy Services where I learned to code in a professional
+                environment.
+            </h6>
+            <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                I enjoy developing full stack applications and learning new languages and frameworks in the process. I
+                have developed applications using various front-end and back-end frameworks, a few of which can be found
+                below. I also have some experience developing Android applications. Presently, I am exploring React and
+                React Native to dive deeper into mobile development.
+            </h6>
+            <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                I also recently accepted an [in]ternship offer at LinkedIn, where I will be working as a Software
+                Engineer Intern over the summer :D
+            </h6>
+        </div>
     </div>
-    <small ng-class="{true: 'font-light', false: 'font-dark'}[theme]">Switch Theme</small>
-    <br><br>
-    <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">Hello, I am</h6>
-    <h2 ng-class="{true: 'font-light', false: 'font-dark'}[theme]"><strong>SAURABH MHATRE</strong></h2>
-    <div ng-class="{true: 'image-wrapper-light', false: 'image-wrapper-dark'}[theme]">
-        <img src="assets/portfolio-page-image.jpg" class="image-style" alt="Saurabh Mhatre">
-    </div>
-    <br>
-    <div class="intro-wrapper">
-        <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-            I am a graduate student at North Carolina State University studying Computer Science. Prior to this,
-            I've worked as a Java Developer at Tata Consultancy Services where I learned to code in a professional
-            environment.
-        </h6>
-        <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-            I enjoy developing full stack applications and learning new languages and frameworks in the process. I 
-            have developed applications using various front-end and back-end frameworks, a few of which can be found
-            below. I also have some experience developing Android applications. Presently, I am exploring React and
-            React Native to dive deeper into mobile development.
-        </h6>
-        <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-            I also recently accepted an [in]ternship offer at LinkedIn, where I will be working as a Software 
-            Engineer Intern over the summer :D
-        </h6>
-    </div>
-</div>
 
-<nav ng-class="{true: 'navbar navbar-expand navbar-dark sticky-top justify-content-center navbar-color-light',
+    <nav id="bottom-nav" ng-class="{true: 'navbar navbar-expand navbar-dark sticky-top justify-content-center navbar-color-light',
                 false: 'navbar navbar-expand navbar-dark sticky-top justify-content-center navbar-color-dark'}[theme]">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" ng-style="color" href="#projects-container"><h6>Projects</h6></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" ng-style="color" href="#experience-container"><h6>Experience</h6></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" ng-style="color" href="#education-container"><h6>Education</h6></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" ng-style="color" href="#contact-container"><h6>Contact</h6></a>
-        </li>
-    </ul>
-</nav>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a id="projects" class="nav-link" ng-style="color" href="#projects-container">
+                    <h6>Projects</h6>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a id="experience" class="nav-link" ng-style="color" href="#experience-container">
+                    <h6>Experience</h6>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a id="education" class="nav-link" ng-style="color" href="#education-container">
+                    <h6>Education</h6>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a id="contact" class="nav-link" ng-style="color" href="#contact-container">
+                    <h6>Contact</h6>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-<div ng-class="{true: 'wrapper-light', false: 'wrapper-dark'}[theme]">
-    <div class="main-container" id="projects-container">
-        <br>
-        <h3 align="center"
-            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-            PROJECTS
-        </h3>
-        <div class="height-custom"></div>
-        <div class="row">
-            <div class="col-sm-12 mt-4">
-                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <strong>ASK ME ANYTHING</strong>
-                </h5>
-                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <small>Java | Dropwizard | Hibernate | AngularJS | Bootstrap</small>
-                </h6>
-                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <p>
-                        A discussion forum that started as a hobby project and is inspired by the likes of
-                        Quora and StackOverflow.
-                    </p>
-                    <p>
-                    <p>
-                        I started working on this project when I was learning Dropwizard. After working on the REST APIs
-                        for some time, I decided to make a front end as well, getting my hands dirty with Bootstrap and
-                        AngularJS in the process. The result was immensely satisfying, and I ended up investing more
-                        time as well as adding more features than I had initially planned. A highlight of this
-                        application is that it allows users to like questions and/or answers which are always ranked
-                        based on the number of likes.
-                    </p>
-                    <div class="btn-group btn-group-md">
-                        <a class="btn btn-primary"
-                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
-                           href="https://github.com/theSaurabhMhatre/forum-solution">
-                            GitHub Repository
-                        </a>
-                        <a class="btn btn-primary"
-                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
-                           href="https://ask-me-any-thing.herokuapp.com/forum#!/home/all">
-                            Check it in action
-                        </a>
+    <nav id="top-nav" ng-class="{true: 'navbar navbar-expand navbar-dark sticky-top justify-content-center navbar-color-light',
+                false: 'navbar navbar-expand navbar-dark sticky-top justify-content-center navbar-color-dark'}[theme]">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" ng-style="color" href="#intro-container">
+                    <span><strong>SAURABH ANANT MHATRE</strong></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div ng-class="{true: 'wrapper-light', false: 'wrapper-dark'}[theme]">
+        <div class="main-container" id="projects-container">
+            <br>
+            <h3 align="center" ng-class="{true: 'font-light', false: 'font-dark'}[theme]" id="123456">
+                PROJECTS
+            </h3>
+            <div class="height-custom"></div>
+            <div class="row">
+                <div class="col-sm-12 mt-4">
+                    <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <strong>ASK ME ANYTHING</strong>
+                    </h5>
+                    <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <small>Java | Dropwizard | Hibernate | AngularJS | Bootstrap</small>
+                    </h6>
+                    <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                        <p>
+                            A discussion forum that started as a hobby project and is inspired by the likes of
+                            Quora and StackOverflow.
+                        </p>
+                        <p>
+                            <p>
+                                I started working on this project when I was learning Dropwizard. After working on the
+                                REST APIs
+                                for some time, I decided to make a front end as well, getting my hands dirty with
+                                Bootstrap and
+                                AngularJS in the process. The result was immensely satisfying, and I ended up investing
+                                more
+                                time as well as adding more features than I had initially planned. A highlight of this
+                                application is that it allows users to like questions and/or answers which are always
+                                ranked
+                                based on the number of likes.
+                            </p>
+                            <div class="btn-group btn-group-md">
+                                <a class="btn btn-primary"
+                                    style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                                    href="https://github.com/theSaurabhMhatre/forum-solution">
+                                    GitHub Repository
+                                </a>
+                                <a class="btn btn-primary"
+                                    style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                                    href="https://ask-me-any-thing.herokuapp.com/forum#!/home/all">
+                                    Check it in action
+                                </a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 mt-4">
+                    <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <strong>SIMPLE LIBRARY</strong>
+                    </h5>
+                    <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <small>Ruby on Rails | OAuth 2.0 | Bootstrap</small>
+                    </h6>
+                    <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                        <p>
+                            A simple library management system which includes almost all the features required to manage
+                            a library.
+                        </p>
+                        <p>
+                            <p>
+                                I worked alongside two team members to create this web application as a part of my
+                                coursework
+                                during Masters. It has been developed using Ruby on Rails and we've leveraged various
+                                libraries
+                                to implement a plethora of features. The user base consists of three types of users, all
+                                with
+                                role based privileges. Users are also notified of various requests via emails. It also
+                                supports
+                                social login through Google accounts. Additionally, the application is completely
+                                responsive for
+                                mobile use.
+                            </p>
+                            <div class="btn-group btn-group-md">
+                                <a class="btn btn-primary"
+                                    style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                                    href="https://github.com/theSaurabhMhatre/oodd-517-library-management-system">
+                                    GitHub Repository
+                                </a>
+                                <a class="btn btn-primary"
+                                    style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                                    href="https://simple-library-system.herokuapp.com/login">
+                                    Check it in action
+                                </a>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 mt-4">
+                    <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <strong>EXPERTIZA</strong>
+                    </h5>
+                    <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <small>Open Source | Ruby on Rails | SideKiq</small>
+                    </h6>
+                    <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                        <p>
+                            Made Open Source Contribution to Expertiza, a course management and peer review system used
+                            by
+                            instructors at North Carolina State University.
+                        </p>
+                        <p>
+                            <p>
+                                Expertiza is a course management system in use at North Carolina State University. It
+                                has been
+                                built using Ruby on Rails. As a part of coursework, we had to enhance the functionality
+                                of the
+                                system. My team was tasked with augmenting the grade calculation of quizzes, a module
+                                which
+                                allowed quizzes to be created. We introduced the ability to associate weights with
+                                questions in
+                                a quiz, and ensured that those weights are considered when grading those quizzes. Also,
+                                we
+                                worked on the assignment module, and improved the way topic deadlines are handled.
+                            </p>
+                            <div class="btn-group btn-group-md">
+                                <a class="btn btn-primary"
+                                    style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                                    href="https://github.com/theSaurabhMhatre/expertiza/tree/grade-calc">
+                                    GitHub Repository
+                                </a>
+                                <a class="btn btn-primary"
+                                    style="color: #fff;background-color: #343A40;border-color: #343A40;"
+                                    href="https://expertiza.ncsu.edu">
+                                    Visit Expertiza
+                                </a>
+                            </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 mt-4">
-                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <strong>SIMPLE LIBRARY</strong>
-                </h5>
-                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <small>Ruby on Rails | OAuth 2.0 | Bootstrap</small>
-                </h6>
-                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <p>
-                        A simple library management system which includes almost all the features required to manage
-                        a library.
-                    </p>
-                    <p>
-                    <p>
-                        I worked alongside two team members to create this web application as a part of my coursework
-                        during Masters. It has been developed using Ruby on Rails and we've leveraged various libraries
-                        to implement a plethora of features. The user base consists of three types of users, all with
-                        role based privileges. Users are also notified of various requests via emails. It also supports
-                        social login through Google accounts. Additionally, the application is completely responsive for
-                        mobile use.
-                    </p>
-                    <div class="btn-group btn-group-md">
-                        <a class="btn btn-primary"
-                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
-                           href="https://github.com/theSaurabhMhatre/oodd-517-library-management-system">
-                            GitHub Repository
-                        </a>
-                        <a class="btn btn-primary"
-                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
-                           href="https://simple-library-system.herokuapp.com/login">
-                            Check it in action
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 mt-4">
-                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <strong>EXPERTIZA</strong>
-                </h5>
-                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <small>Open Source | Ruby on Rails | SideKiq</small>
-                </h6>
-                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <p>
-                        Made Open Source Contribution to Expertiza, a course management and peer review system used by
-                        instructors at North Carolina State University.
-                    </p>
-                    <p>
-                    <p>
-                        Expertiza is a course management system in use at North Carolina State University. It has been
-                        built using Ruby on Rails. As a part of coursework, we had to enhance the functionality of the
-                        system. My team was tasked with augmenting the grade calculation of quizzes, a module which
-                        allowed quizzes to be created. We introduced the ability to associate weights with questions in
-                        a quiz, and ensured that those weights are considered when grading those quizzes. Also, we
-                        worked on the assignment module, and improved the way topic deadlines are handled.
-                    </p>
-                    <div class="btn-group btn-group-md">
-                        <a class="btn btn-primary"
-                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
-                           href="https://github.com/theSaurabhMhatre/expertiza/tree/grade-calc">
-                            GitHub Repository
-                        </a>
-                        <a class="btn btn-primary"
-                           style="color: #fff;background-color: #343A40;border-color: #343A40;"
-                           href="https://expertiza.ncsu.edu">
-                            Visit Expertiza
-                        </a>
+        </div>
+
+        <div class="divider div-transparent"></div>
+
+        <div class="main-container" id="experience-container">
+            <br>
+            <h3 align="center" ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                WORK EXPERIENCE
+            </h3>
+            <div class="height-custom"></div>
+            <div class="row">
+                <div class="col-sm-12 mt-4">
+                    <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <strong>TATA CONSULTANCY SERVICES</strong>
+                    </h5>
+                    <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <small>Java Developer | September 2017 - June 2019</small>
+                    </h6>
+                    <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                        <p>
+                            Post Bachelor’s, a job at TCS provided me with ample opportunities to apply my learning to
+                            existing software systems which helped me understand the usage of technologies from an
+                            industry
+                            standpoint. At TCS, I was able to enhance my understanding of software systems and was
+                            introduced to various tools and methodologies available to help streamline development
+                            processes.
+                        </p>
+                        <p>
+                            During my tenure at TCS, I worked in a small team as a Java developer to enhance a
+                            legacy content management system developed using Struts, a Java framework. I was also tasked
+                            with the maintenance of a multitude of Java services which communicated with API endpoints
+                            using the SDK provided by Box Inc, a cloud content management service. Additionally, I also
+                            had
+                            various opportunities to collaborate with the DevOps team to build CI/CD pipelines thereby
+                            augment my understanding of the deployment process.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="divider div-transparent"></div>
+        <div class="divider div-transparent"></div>
 
-    <div class="main-container" id="experience-container">
-        <br>
-        <h3 align="center"
-            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-            WORK EXPERIENCE
-        </h3>
-        <div class="height-custom"></div>
-        <div class="row">
-            <div class="col-sm-12 mt-4">
-                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <strong>TATA CONSULTANCY SERVICES</strong>
-                </h5>
-                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <small>Java Developer | September 2017 - June 2019</small>
-                </h6>
-                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <p>
-                        Post Bachelor’s, a job at TCS provided me with ample opportunities to apply my learning to
-                        existing software systems which helped me understand the usage of technologies from an industry
-                        standpoint. At TCS, I was able to enhance my understanding of software systems and was
-                        introduced to various tools and methodologies available to help streamline development
-                        processes.
-                    </p>
-                    <p>
-                        During my tenure at TCS, I worked in a small team as a Java developer to enhance a
-                        legacy content management system developed using Struts, a Java framework. I was also tasked
-                        with the maintenance of a multitude of Java services which communicated with API endpoints
-                        using the SDK provided by Box Inc, a cloud content management service. Additionally, I also had
-                        various opportunities to collaborate with the DevOps team to build CI/CD pipelines thereby
-                        augment my understanding of the deployment process.
-                    </p>
+        <div class="main-container" id="education-container">
+            <br>
+            <h3 align="center" ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                EDUCATION
+            </h3>
+            <div class="height-custom"></div>
+            <div class="row">
+                <div class="col-md-6 mt-4">
+                    <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <strong>MASTERS DEGREE</strong>
+                    </h5>
+                    <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        Master of Computer Science
+                    </h6>
+                    <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                        <span>North Carolina State University, Raleigh</span>
+                        <br>
+                        <span>August 2019 - May 2021 (Expected)</span>
+                        <br>
+                        <span>Semester 1 GPA - 4.0</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <strong>BACHELORS DEGREE</strong>
+                    </h5>
+                    <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        Bachelor of Computer Engineering
+                    </h6>
+                    <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                        <span>Vidyalankar Institute of Technology, Mumbai</span>
+                        <br>
+                        <span>August 2013 - May 2017</span>
+                        <br>
+                        <span>Cumulative GPA - 8.8 / 10</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="divider div-transparent"></div>
+        <div class="divider div-transparent"></div>
 
-    <div class="main-container" id="education-container">
-        <br>
-        <h3 align="center"
-            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-            EDUCATION
-        </h3>
-        <div class="height-custom"></div>
-        <div class="row">
-            <div class="col-md-6 mt-4">
-                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <strong>MASTERS DEGREE</strong>
-                </h5>
-                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    Master of Computer Science
-                </h6>
-                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <span>North Carolina State University, Raleigh</span>
-                    <br>
-                    <span>August 2019 - May 2021 (Expected)</span>
-                    <br>
-                    <span>Semester 1 GPA - 4.0</span>
-                </div>
-            </div>
-            <div class="col-md-6 mt-4">
-                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <strong>BACHELORS DEGREE</strong>
-                </h5>
-                <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    Bachelor of Computer Engineering
-                </h6>
-                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <span>Vidyalankar Institute of Technology, Mumbai</span>
-                    <br>
-                    <span>August 2013 - May 2017</span>
-                    <br>
-                    <span>Cumulative GPA - 8.8 / 10</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="divider div-transparent"></div>
-
-    <div class="main-container" id="contact-container">
-        <br>
-        <h3 align="center"
-            ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-            CONTACT
-        </h3>
-        <div class="height-custom"></div>
-        <a class="btn btn-primary btn-sm"
-           href="assets/saurabh-mhatre-resume.pdf"
-           ng-style="social"
-           download>
-            <strong>
-                Download Resume
-            </strong>
-        </a>
-        <div class="row">
-            <div class="col-sm-12 mt-4">
-                <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-                    <strong>Raleigh, North Carolina</strong>
-                </h5>
-                <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                    <p>
-                        smhatre [at] ncsu [dot] edu
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div>
-            <a class="btn btn-primary btn-sm"
-               href="https://github.com/theSaurabhMhatre"
-               ng-style="social">
-                <span class="fa fa-github-alt"></span>
-                <strong> GitHub</strong>
+        <div class="main-container" id="contact-container">
+            <br>
+            <h3 align="center" ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                CONTACT
+            </h3>
+            <div class="height-custom"></div>
+            <a class="btn btn-primary btn-sm" href="assets/saurabh-mhatre-resume.pdf" ng-style="social" download>
+                <strong>
+                    Download Resume
+                </strong>
             </a>
-            <a class="btn btn-primary btn-sm"
-               href="https://www.linkedin.com/in/saurabh-mhatre-2a7949104/"
-               ng-style="social">
-                <span class="fa fa-linkedin"></span>
-                <strong> LinkedIn</strong>
-            </a>
-            <a class="btn btn-primary btn-sm"
-               href="mailto:smhatre@ncsu.edu"
-               ng-style="social">
-                <span class="fa fa-envelope"></span>
-                <strong> Mail</strong>
-            </a>
-        </div>
-        <br>
-        <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
-            Send me a message and I'll revert as soon as I can!
-        </h6>
-        <div class="form-margins">
-            <form action="https://formspree.io/smhatre@ncsu.edu"
-                  method="POST">
-                <div class="row">
-                    <div class="col-sm-6" style="padding-left: 4px; padding-right: 4px">
-                        <div class="form-group" align="left">
-                            <!--<small><label>Name</label></small>-->
-                            <input type="text"
-                                   name="name"
-                                   placeholder="Name"
-                                   class="form-control form-control-sm"
-                                   required>
+            <div class="row">
+                <div class="col-sm-12 mt-4">
+                    <h5 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                        <strong>Raleigh, North Carolina</strong>
+                    </h5>
+                    <div ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
+                        <p>
+                            smhatre [at] ncsu [dot] edu
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a class="btn btn-primary btn-sm" href="https://github.com/theSaurabhMhatre" ng-style="social">
+                    <span class="fa fa-github-alt"></span>
+                    <strong> GitHub</strong>
+                </a>
+                <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/saurabh-mhatre-2a7949104/"
+                    ng-style="social">
+                    <span class="fa fa-linkedin"></span>
+                    <strong> LinkedIn</strong>
+                </a>
+                <a class="btn btn-primary btn-sm" href="mailto:smhatre@ncsu.edu" ng-style="social">
+                    <span class="fa fa-envelope"></span>
+                    <strong> Mail</strong>
+                </a>
+            </div>
+            <br>
+            <h6 ng-class="{true: 'font-light', false: 'font-dark'}[theme]">
+                Send me a message and I'll revert as soon as I can!
+            </h6>
+            <div class="form-margins">
+                <form action="https://formspree.io/smhatre@ncsu.edu" method="POST">
+                    <div class="row">
+                        <div class="col-sm-6" style="padding-left: 4px; padding-right: 4px">
+                            <div class="form-group" align="left">
+                                <!--<small><label>Name</label></small>-->
+                                <input type="text" name="name" placeholder="Name" class="form-control form-control-sm"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" style="padding-left: 4px; padding-right: 4px">
+                            <div class="form-group" align="left">
+                                <!--<small><label>Email</label></small>-->
+                                <input type="email" name="_replyto" placeholder="Email"
+                                    class="form-control form-control-sm" requied>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-6" style="padding-left: 4px; padding-right: 4px">
-                        <div class="form-group" align="left">
-                            <!--<small><label>Email</label></small>-->
-                            <input type="email"
-                                   name="_replyto"
-                                   placeholder="Email"
-                                   class="form-control form-control-sm"
-                                   requied>
+                    <div class="row">
+                        <div class="col-sm-12" style="padding-left: 4px; padding-right: 4px">
+                            <div class="form-group" align="left">
+                                <!--<small><label>Message</label></small>-->
+                                <textarea name="message" rows="5" placeholder="Message"
+                                    class="form-control form-control-sm" style="resize: none;" required></textarea>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12" style="padding-left: 4px; padding-right: 4px">
-                        <div class="form-group" align="left">
-                            <!--<small><label>Message</label></small>-->
-                            <textarea name="message"
-                                      rows="5"
-                                      placeholder="Message"
-                                      class="form-control form-control-sm"
-                                      style="resize: none;"
-                                      required></textarea>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit"
-                       value="Send message"
-                       class="btn btn-primary btn-sm pull-right"
-                       style="margin-right: -10px;">
-            </form>
+                    <input type="submit" value="Send message" class="btn btn-primary btn-sm pull-right"
+                        style="margin-right: -10px;">
+                </form>
+            </div>
+            <br>
         </div>
         <br>
     </div>
-    <br>
-</div>
 
-<div align="center">
-    <strong ng-class="{true: 'font-custom font-dark', false: 'font-custom font-light'}[theme]">
-        Copyright
-    </strong>
-    <i ng-class="{true: 'fa fa-copyright font-dark', false: 'fa fa-copyright font-light'}[theme]">
-        <strong class="font-custom">
-            Saurabh Mhatre 2020
+    <div align="center">
+        <strong ng-class="{true: 'font-custom font-dark', false: 'font-custom font-light'}[theme]">
+            Copyright
         </strong>
-    </i>
-</div>
+        <i ng-class="{true: 'fa fa-copyright font-dark', false: 'fa fa-copyright font-light'}[theme]">
+            <strong class="font-custom">
+                Saurabh Mhatre 2020
+            </strong>
+        </i>
+    </div>
 
-<br>
+    <br>
 
 </body>
 
 <script>
-    let anchorLinks = document.querySelectorAll('a[href^="#"]');
-    for (let item of anchorLinks) {
-        item.addEventListener('click', (e) => {
-            let hashVal = item.getAttribute('href');
-            let target = document.querySelector(hashVal);
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-            history.pushState(null, null, hashVal);
-            e.preventDefault();
-        })
-    }
+    let direction = 0, height = 0, last = 0;
+    let div, topNav, bottomNav, anchorLinks;
+    window.onload = () => {
+        topNav = $('#top-nav');
+        bottomNav = $('#bottom-nav');
+        div = $('#intro-container');
+        height = topNav.outerHeight();
+        anchorLinks = document.querySelectorAll('a[href^="#"]');
+        direction = window.location.href.includes('#') ? 1 : 0;
+        introInView = () => {
+            elementTop = $(div).offset().top;
+            viewportTop = $(window).scrollTop();
+            elementBottom = elementTop + $(div).outerHeight();
+            viewportBottom = viewportTop + $(window).height();
+            return elementBottom > viewportTop && elementTop < viewportBottom;
+        };
+        toggleNavs = () => {
+            if (introInView()) {
+                topNav.css({
+                    "opacity": 0,
+                    'z-index': '1010',
+                    "visibility": "hidden",
+                    "transition": "visibility 0s linear 0.33s, opacity 0.33s linear"
+                });
+            } else {
+                topNav.css({
+                    "opacity": 1,
+                    "visibility": "visible",
+                    "transition-delay": "0s"
+                });
+                bottomNav.css({
+                    'position': '-webkit-sticky',
+                    'position': 'sticky',
+                    'z-index': '1020',
+                    'top': height
+                });
+            }
+        }
+        window.onscroll = () => {
+            if (last != 0 &&
+                !window.location.href.includes(last.id)) {
+                $(last).animate({
+                    'padding-top': '2em'
+                }, 'slow');
+            }
+            toggleNavs();
+        };
+        for (let item of anchorLinks) {
+            item.addEventListener('click', (e) => {
+                let hashVal = item.getAttribute('href');
+                let target = document.querySelector(hashVal);
+                if (target.id == last.id) {
+                    setTimeout(() => {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        })
+                    }, 500);
+                } else if (target.id != last.id
+                    || target.id == "intro-container") {
+                    if (last != 0) {
+                        $(last).animate({
+                            'padding-top': '2em'
+                        }, 'slow');
+                    }
+                    last = target;
+                    if (target.id != "intro-container") {
+                        $(hashVal).animate({
+                            'padding-top': '120'
+                        }, 'slow');
+                    }
+                    setTimeout(() => {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        })
+                    }, 500);
+                    history.pushState(null, null, hashVal);
+                }
+                e.preventDefault();
+            })
+        };
+        if (window.location.href.includes('#')) {
+            let idx1 = window.location.href.indexOf('#');
+            let idx2 = window.location.href.indexOf('-');
+            let hashVal = window.location.href.substring(idx1 + 1, idx2);
+            hashVal = hashVal == 'intro' ? hashVal + '-container' : hashVal;
+            document.querySelector('#' + hashVal).click();
+            toggleNavs();
+        }
+    };
 </script>
 
 </html>

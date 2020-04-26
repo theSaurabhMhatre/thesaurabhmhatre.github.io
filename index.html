@@ -398,7 +398,7 @@
 </body>
 
 <script>
-    let direction = 0, height = 0, last = 0;
+    let height = 0, last = 0;
     let div, topNav, bottomNav, anchorLinks;
     window.onload = () => {
         topNav = $('#top-nav');
@@ -406,7 +406,6 @@
         div = $('#intro-container');
         height = topNav.outerHeight();
         anchorLinks = document.querySelectorAll('a[href^="#"]');
-        direction = window.location.href.includes('#') ? 1 : 0;
         introInView = () => {
             elementTop = $(div).offset().top;
             viewportTop = $(window).scrollTop();

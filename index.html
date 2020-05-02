@@ -410,6 +410,9 @@
     let height = 0, last = 0;
     let div, topNav, bottomNav, anchorLinks;
     window.onload = () => {
+        setTimeout(init, 400);
+    }
+    init = () => {
         topNav = $('#top-nav');
         bottomNav = $('#bottom-nav');
         div = $('#intro-container');

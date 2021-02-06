@@ -36,15 +36,13 @@
         <br>
         <div class="intro-wrapper">
             <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                I am a graduate student at North Carolina State University studying Computer Science. Prior to this,
-                I've worked as a Java Developer at Tata Consultancy Services where I learned to code in a professional
-                environment.
+                I am a graduate student at North Carolina State University studying Computer Science. I have experience 
+                working across the stack, thanks to various professional opportunities as well as my constant appetite 
+                for learning new technologies and creating meaningful experiences using them.
             </h6>
             <h6 ng-class="{true: 'font-custom font-light', false: 'font-custom font-dark'}[theme]">
-                I enjoy developing full stack applications and learning new languages and frameworks in the process. I
-                have developed applications using various front-end and back-end frameworks, a few of which can be found
-                below. I also have some experience developing Android applications. Presently, I am exploring React and
-                React Native to dive deeper into mobile development.
+                I enjoy developing full stack applications and learning new languages and frameworks in the process. I 
+                have developed applications using various front-end and back-end frameworks, a few of which can be found below.
             </h6>
         </div>
     </div>
@@ -282,7 +280,7 @@
                         <br>
                         <span>August 2019 - May 2021 (Expected)</span>
                         <br>
-                        <span>Semester 1 & 2 GPA - 4.0</span>
+                        <span>Semester 1, 2 & 3 GPA - 4.0</span>
                     </div>
                 </div>
                 <div class="col-md-6 mt-4">
@@ -385,7 +383,7 @@
         </strong>
         <i ng-class="{true: 'fa fa-copyright font-dark', false: 'fa fa-copyright font-light'}[theme]">
             <strong class="font-custom">
-                Saurabh Mhatre 2020
+                Saurabh Mhatre 2021
             </strong>
         </i>
     </div>
@@ -416,16 +414,16 @@
         toggleNavs = () => {
             if (introInView()) {
                 topNav.css({
-                    "opacity": 0,
+                    'opacity': 0,
                     'z-index': '1010',
-                    "visibility": "hidden",
-                    "transition": "visibility 0s linear 0.33s, opacity 0.33s linear"
+                    'visibility': 'hidden',
+                    'transition': 'visibility 0s linear 0.33s, opacity 0.33s linear'
                 });
             } else {
                 topNav.css({
-                    "opacity": 1,
-                    "visibility": "visible",
-                    "transition-delay": "0s"
+                    'opacity': 1,
+                    'visibility': 'visible',
+                    'transition-delay': '0s'
                 });
                 bottomNav.css({
                     'position': '-webkit-sticky',
@@ -456,14 +454,14 @@
                         })
                     }, 500);
                 } else if (target.id != last.id
-                    || target.id == "intro-container") {
+                    || target.id == 'intro-container') {
                     if (last != 0) {
                         $(last).animate({
                             'padding-top': '2em'
                         }, 'slow');
                     }
                     last = target;
-                    if (target.id != "intro-container") {
+                    if (target.id != 'intro-container') {
                         $(hashVal).animate({
                             'padding-top': '120'
                         }, 'slow');

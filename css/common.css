@@ -19,7 +19,6 @@
     height: 200px;
     padding: 0.2rem;
     border-radius: 50%;
-    /*border: #343A40 0.4rem solid;*/
 }
 
 @media screen and (max-width: 600px) {
@@ -28,7 +27,6 @@
         height: 300px;
         padding: 0.2rem;
         border-radius: 50%;
-        /*border: #343A40 0.2rem solid;*/
     }
 }
 

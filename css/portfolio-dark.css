@@ -9,9 +9,29 @@
     color: white;
     min-height: 1000px;
     background: #1D1E22;
-    margin: 2em max(10rem, 10%) 2em max(10rem, 10%);
+    margin: 2em auto 2em auto;
     border-radius: 0.6em;
     max-width: 1300px;
+}
+
+@media screen and (max-width: 1400px) {
+    .wrapper-dark {
+        color: white;
+        min-height: 1000px;
+        background: #1D1E22;
+        margin: 2em 10em 2em 10em;
+        border-radius: 0.6em;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .wrapper-dark {
+        color: white;
+        min-height: 1000px;
+        background: #1D1E22;
+        margin: 2em 9em 2em 9em;
+        border-radius: 0.6em;
+    }
 }
 
 @media screen and (max-width: 1200px) {

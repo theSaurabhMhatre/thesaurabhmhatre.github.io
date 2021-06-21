@@ -159,3 +159,9 @@
     background: #FFFFFF;
     height: auto;
 }
+
+.vert-line-dark {
+    margin: -1% 50% 1% 50%;
+    border-left: 1px dashed #FFFFFF;
+    height: 30px;
+}

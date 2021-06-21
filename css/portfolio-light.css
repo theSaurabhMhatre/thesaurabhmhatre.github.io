@@ -159,3 +159,9 @@
     background: #1D1E22;
     height: auto;
 }
+
+.vert-line-light {
+    margin: -1% 50% 1% 50%;
+    border-left: 1px dashed #1D1E22;
+    height: 30px;
+}
